@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: private-audiobookshelf_web_1
+      APP_PORT: 13378
+
+  server:
+    image: ghcr.io/advplyr/audiobookshelf
+    user: 1000:1000
+    init: true
+    restart: on-failure
+    stop_grace_period: 1m
+    environment:
+      - AUDIOBOOKSHELF_UID=1000
+      - AUDIOBOOKSHELF_GID=1000
+    ports:
+      - 13378:80
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/config
+      - ${APP_DATA_DIR}/data/metadata:/metadata
+      - ${UMBREL_ROOT}/data/storage/downloads/audiobooks:/audiobooks
+      - ${UMBREL_ROOT}/data/storage/downloads/podcasts:/podcasts

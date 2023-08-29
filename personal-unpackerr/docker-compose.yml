@@ -1,18 +1,16 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: personal-unpackerr_web_1
-      APP_PORT: 8548
+  # app_proxy:
+  #   environment:
+  #     APP_HOST: personal-unpackerr_web_1
+  #     APP_PORT: 8548
 
   server:
     image: golift/unpackerr
     restart: on-failure
     user: 1000:1000
     init: true
-    env_file:
-      - .env
     environment:
       - TZ=${TZ}
       # General config
@@ -29,7 +27,7 @@ services:
       - UN_DIR_MODE=0755
       # Sonarr Config
       - UN_SONARR_0_URL=http://sonarr_server_1:8989
-      - UN_SONARR_0_API_KEY=
+      - UN_SONARR_0_API_KEY=502139b808104cd58b5797fa548e3f60
       - UN_SONARR_0_PATHS_0=/downloads
       - UN_SONARR_0_PROTOCOLS=torrent
       - UN_SONARR_0_TIMEOUT=10s
@@ -37,7 +35,7 @@ services:
       - UN_SONARR_0_DELETE_DELAY=5m
       # Radarr Config
       - UN_RADARR_0_URL=http://radarr_server_1:7878
-      - UN_RADARR_0_API_KEY=
+      - UN_RADARR_0_API_KEY=cc494d6a3f5944f3b657ecd7b6d61574
       - UN_RADARR_0_PATHS_0=/downloads
       - UN_RADARR_0_PROTOCOLS=torrent
       - UN_RADARR_0_TIMEOUT=10s
@@ -60,7 +58,8 @@ services:
       - UN_READARR_0_DELETE_ORIG=false
       - UN_READARR_0_DELETE_DELAY=5m
     volumes:
+     - ./data/config:/config
      #- ${APP_DATA_DIR}/data/config:/config
-     - ${UMBREL_ROOT}/data/storage/downloads:/downloads
+     #- ${UMBREL_ROOT}/data/storage/downloads:/downloads
     security_opt:
       - no-new-privileges:true

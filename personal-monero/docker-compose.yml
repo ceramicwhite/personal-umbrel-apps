@@ -7,7 +7,7 @@ services:
       APP_PORT: 9976
       PROXY_AUTH_ADD: "true"
 
-  server:
+    server:
     image: deverickapollo/umbrel-monero:v1.0.0@sha256:a5ca2854b71de83a26a4176bf82f92609b0e67f54be5b7eb9386acffba87b33e
     depends_on: [monerod]
     restart: on-failure
@@ -24,9 +24,6 @@ services:
       MONERO_DEFAULT_NETWORK: "${MONERO_DEFAULT_NETWORK}"
       MONERO_RPC_USER: "${APP_MONERO_RPC_USER}"
       MONERO_RPC_PASSWORD: "${APP_MONERO_RPC_PASS}"
-      RPC_PORT: "${APP_MONERO_RPC_PORT}"
-      RPC_USER: "${APP_MONERO_RPC_USER}"
-      RPC_PASSWORD: "${APP_MONERO_RPC_PASS}"
       MONERO_RPC_HIDDEN_SERVICE: "${APP_MONERO_RPC_HIDDEN_SERVICE}"
       MONERO_P2P_HIDDEN_SERVICE: "${APP_MONERO_P2P_HIDDEN_SERVICE}"
       DEVICE_DOMAIN_NAME: "${DEVICE_DOMAIN_NAME}"
@@ -52,9 +49,6 @@ services:
     ports:
       - "${APP_MONERO_P2P_PORT}:${APP_MONERO_P2P_PORT}"
       - "${APP_MONERO_RPC_PORT}:${APP_MONERO_RPC_PORT}"
-    expose:
-      - "${APP_MONERO_P2P_PORT}"
-      - "${APP_MONERO_RPC_PORT}"
     volumes:
       - "${APP_MONERO_DATA_DIR}:/home/monero/.bitmonero"
     networks:

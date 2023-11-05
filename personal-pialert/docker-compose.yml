@@ -1,0 +1,20 @@
+services:
+  app_proxy:
+    environment:
+      APP_HOST: personal-pialert_web_1
+      APP_PORT: 20211
+
+  web:
+    image: jokobsk/pi.alert:latest
+    #privileged: true
+    network_mode: host
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/config:/home/pi/pialert/config  
+      - ${APP_DATA_DIR}/data/db:/home/pi/pialert/db           
+      - ${APP_DATA_DIR}/data/logs:/home/pi/pialert/front/log
+    environment:
+      - TZ=America/Los_Angeles
+      - PORT=20211
+      - HOST_USER_ID=1000
+      - HOST_USER_GID=1000

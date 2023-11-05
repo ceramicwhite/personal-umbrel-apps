@@ -1,0 +1,23 @@
+manifestVersion: 1.1
+id: personal-pialert
+category: networking
+name: PiAlert
+version: "23"
+tagline: PiAlert is monitoring your WIFI/LAN network and alerting of new (intruder or hacker) devices.
+description: >-
+  WIFI / LAN intruder detector. Scans for devices connected to your network and alerts you if new and unknown devices are found.
+developer: jokob-sk
+website: https://github.com/jokob-sk/Pi.Alert
+dependencies: []
+repo: https://github.com/jokob-sk/Pi.Alert
+support: https://github.com/jokob-sk/Pi.Alert/issues
+port: 20211
+submitter: Jasper
+submission: https://github.com/getumbrel/umbrel-apps/pull/0
+gallery: 
+  - 1.jpg 
+  - 2.jpg 
+  - 3.jpg 
+path: ""
+defaultPassword: ""
+releaseNotes: ""

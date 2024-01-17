@@ -4,7 +4,7 @@ services:
   app_proxy:
     environment:
       APP_HOST: personal-watch-your-lan_web_1
-      APP_PORT: 8840
+      APP_PORT: 8845
 
   web:
     image: aceberg/watchyourlan
@@ -16,7 +16,7 @@ services:
       IFACE: "eth0 wlan0"               # required: 1 or more interface
       DBPATH: "/data/db.sqlite"         # optional, default: /data/db.sqlite
       GUIIP: "0.0.0.0"                  # optional, default: localhost
-      GUIPORT: "8840"                   # optional, default: 8840
+      GUIPORT: "8845"                   # optional, default: 8840
       TIMEOUT: "120"                    # optional, time in seconds, default: 60
       THEME: "darkly"                   # optional
       IGNOREIP: "no"                    # optional

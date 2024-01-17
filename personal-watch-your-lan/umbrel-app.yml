@@ -5,7 +5,7 @@ tagline: Lightweight network IP scanner with web GUI
 icon: https://svgur.com/i/120w.svg
 category: networking
 version: "1.0.6"
-port: 8845
+port: 8841
 description: >-
   Lightweight network IP scanner with web GUI
 developer: aceberg

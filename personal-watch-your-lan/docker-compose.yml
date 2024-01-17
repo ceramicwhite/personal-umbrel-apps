@@ -21,5 +21,7 @@ services:
       THEME: "darkly"                   # optional
       IGNOREIP: "no"                    # optional
     volumes:
-    - ${APP_DATA_DIR}/data:/data
-    - /etc/localtime:/etc/localtime:ro
+      - ${APP_DATA_DIR}/data:/data
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "8840:8840"

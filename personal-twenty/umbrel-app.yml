@@ -8,9 +8,7 @@ version: "0.10.0"
 port: 3020
 description: >-
   We’ve spent thousands of hours grappling with traditional CRMs like Pipedrive and Salesforce to align them with our business needs, 
-
   only to end up frustrated — customizations are complex and the closed ecosystems of these platforms can feel restrictive.
-
 developer: twentyhq
 website: https://twenty.com
 submitter: Jasper
@@ -21,7 +19,7 @@ gallery:
   - https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-docs/static/img/tasks-dark.png
   - https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-docs/static/img/index-dark.png
   - https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-docs/static/img/kanban-dark.png
+releaseNotes: ""
 dependencies: []
 path: ""
 defaultPassword: ""
-releaseNotes: ""

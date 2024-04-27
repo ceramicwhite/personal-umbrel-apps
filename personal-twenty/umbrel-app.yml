@@ -19,7 +19,7 @@ submission:
 repo: https://github.com/twentyhq/twenty
 support: https://docs.twenty.com/
 gallery:
-  - https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-docs/static/img/preview-dark.png
+  - https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-docs/static/img/tasks-dark.png
   - https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-docs/static/img/index-dark.png
   - https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-docs/static/img/kanban-dark.png
 releaseNotes:

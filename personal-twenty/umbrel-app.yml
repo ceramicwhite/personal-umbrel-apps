@@ -6,11 +6,7 @@ icon: https://raw.githubusercontent.com/twentyhq/twenty/ebc25c8695de44032075a6fe
 category: files
 version: "0.10.0"
 port: 3020
-description: >-
-  We've spent thousands of hours grappling with traditional CRMs like Pipedrive and Salesforce to align them with our business needs,
-
-
-  only to end up frustrated — customizations are complex and the closed ecosystems of these platforms can feel restrictive.
+description:
 developer: twentyhq
 website: https://twenty.com
 submitter: Jasper

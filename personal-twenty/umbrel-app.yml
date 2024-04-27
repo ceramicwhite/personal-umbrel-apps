@@ -3,7 +3,7 @@ id: personal-twenty
 name: Twenty
 tagline: Building a modern alternative to Salesforce, powered by the community.
 icon: https://raw.githubusercontent.com/twentyhq/twenty/ebc25c8695de44032075a6fe096aa2d35f93ac7b/packages/twenty-website/public/images/core/logo.svg
-category: files
+category: Files
 version: "0.10.0"
 port: 3020
 description: >-

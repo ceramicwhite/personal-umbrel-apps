@@ -1,0 +1,29 @@
+manifestVersion: 1
+id: personal-twenty
+name: Twenty
+tagline: Building a modern alternative to Salesforce, powered by the community.
+icon: https://raw.githubusercontent.com/twentyhq/twenty/ebc25c8695de44032075a6fe096aa2d35f93ac7b/packages/twenty-website/public/images/core/logo.svg
+category: Files
+version: "0.10.0"
+port: 3020
+description: >-
+  We’ve spent thousands of hours grappling with traditional CRMs like Pipedrive and Salesforce to align them with our business needs, 
+  only to end up frustrated — customizations are complex and the closed ecosystems of these platforms can feel restrictive.
+
+  We felt the need for a CRM platform that empowers rather than constrains. We believe the next great CRM will come from the open source community. 
+  And we’ve packed Twenty with powerful features to give you full control and help you run your business efficiently.
+developer: twentyhq
+website: https://twenty.com
+submitter: Jasper
+submission: 
+repo: https://github.com/twentyhq/twenty
+support: https://docs.twenty.com/
+gallery:
+  - https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-docs/static/img/preview-dark.png
+  - https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-docs/static/img/index-dark.png
+  - https://raw.githubusercontent.com/twentyhq/twenty/main/packages/twenty-docs/static/img/kanban-dark.png
+releaseNotes:
+dependencies: []
+path: ""
+defaultUsername:
+deterministicPassword:

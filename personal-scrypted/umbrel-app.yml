@@ -12,7 +12,7 @@ website: https://scrypted.app
 dependencies: []
 repo: https://github.com/koush/scrypted
 support: https://docs.scrypted.app
-port: 10443
+port: 11080
 submitter: Jasper
 submission: https://github.com/getumbrel/umbrel-apps/pull/0
 gallery: 

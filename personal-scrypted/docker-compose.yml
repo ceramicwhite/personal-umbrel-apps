@@ -7,7 +7,8 @@ services:
         network_mode: host
         environment:
             - SCRYPTED_NVR_VOLUME=/nvr
-            # - SCRYPTED_DOCKER_AVAHI=true
+            - SCRYPTED_DOCKER_AVAHI=false
+            - SCRYPTED_INSECURE_PORT=11080
         volumes:
             - ${APP_DATA_DIR}/data/video:/nvr
             - ${APP_DATA_DIR}/data/volume:/server/volume

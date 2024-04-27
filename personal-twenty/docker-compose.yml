@@ -1,0 +1,49 @@
+name: twenty
+
+services:
+
+  app_proxy:
+    environment:
+      APP_HOST: personal-twenty_server_1
+      APP_PORT: 3000
+
+  server:
+    image: twentycrm/twenty:v0.10.0
+    volumes:
+      - ${APP_DATA_DIR}/local:/app/${STORAGE_LOCAL_PATH:-.local-storage}
+    environment:
+      PORT: 3000
+      PG_DATABASE_URL: postgres://twenty:twenty@db:5432/default
+      SERVER_URL: http://localhost:3000
+      #FRONT_BASE_URL: http://umbrel.local:6666
+      ENABLE_DB_MIGRATIONS: "true"
+      SIGN_IN_PREFILLED: "true"
+      STORAGE_TYPE: local
+      ACCESS_TOKEN_SECRET: GsHBPfJDIVv6FgMaEI/BXBHHaRn+PhEyIEOawGq/qkc=
+      LOGIN_TOKEN_SECRET: weFmxpSQyJZlE6lPZ2hj2nv3yaOWB+3mvzaQ9jCByus=
+      REFRESH_TOKEN_SECRET: uXYOb8F21+qrsG2jvMniwkZodxP+Aj6N37xqDF/qUas=
+      FILE_TOKEN_SECRET: IFmzIqQwPUmQqqUiLtgn86RsY5i3EynaF3Wl48deT1s=
+    healthcheck:
+      test: curl --fail http://localhost:3000/healthz
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: always
+    depends_on:
+      db:
+        condition: service_healthy
+    # ports:
+    #   - "3000:3000"
+
+  db:
+    image: twentycrm/twenty-postgres:v0.10.0
+    volumes:
+      - ${APP_DATA_DIR}/db:/bitnami/postgresql
+    environment:
+      POSTGRES_PASSWORD: twentydb
+    healthcheck:
+      test: pg_isready -U twenty -d default
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: always

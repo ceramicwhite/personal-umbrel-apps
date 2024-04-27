@@ -25,5 +25,5 @@ gallery:
 releaseNotes:
 dependencies: []
 path: ""
-defaultUsername:
-deterministicPassword:
+defaultPassword: ""
+releaseNotes: ""
